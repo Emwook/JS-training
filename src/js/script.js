@@ -1,6 +1,6 @@
 "use strict"
 
-//Ex. #1
+//Ex. 9.1.1
 /* 
 const names = ['Kasia', 'Tomek', 'Amanda', 'Maja'];
 
@@ -23,7 +23,7 @@ femaleNameSelector(names);
 console.log(names);
 */
 
-//Ex. #2
+//Ex. 9.1.2
 /*
 const employees = {
     john: {
@@ -51,8 +51,8 @@ console.log(employeeData);
 
 */
 
-// Ex. #3
-
+// Ex. 9.1.3
+/*
 const salaries = [2000, 3000, 1500, 6000, 3000];
 let salariesSum = 0;
 let highestSalary = 0;
@@ -69,5 +69,57 @@ for(let i = 0; i < salaries.length; i++){
 console.log('sum of the sallaries: ', salariesSum);
 console.log('highest salary: ', highestSalary);
 console.log('lowest salary: ', lowestSalary);
+*/
+
+//Ex. 9.1.4
+/*
+const persons = {
+    john: 2000,
+    amanda: 3000,
+    thomas: 1500,
+    james: 6000,
+    claire: 3000
+  };
+let salariesSum = 0;
+let highestSalary = 0;
+let lowestSalary = 999999;
+for(let person in persons){
+    salariesSum += persons[person];
+    if(persons[person] > highestSalary){
+        highestSalary = persons[person];
+    }
+    if(persons[person] < lowestSalary){
+        lowestSalary = persons[person];
+    }
+}
+console.log('sum of the sallaries: ', salariesSum);
+console.log('highest salary: ', highestSalary);
+console.log('lowest salary: ', lowestSalary);
+*/
+
+//Ex. 9.1.5
+/*
+const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
+
+let uniqueTags = {};
+let appearances = 0;
+let appearancesTable = {};
+
+for(let tagId = 0; tagId < tags.length; tagId++){
+    const tagName = tags[tagId];
+    if(!appearancesTable.hasOwnProperty(tagName)){
+        appearancesTable[tagName] = 0;
+        //console.log(tagName);
+    }
+    appearancesTable[tagName] += 1;
+    appearances = appearancesTable[tagName];
+    const tagCounter = {
+        appearances,
+    }
+    uniqueTags[tagName] = tagCounter;
+}
+console.log(uniqueTags);
+*/
+//Ex. 9.2.4
 
 
