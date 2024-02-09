@@ -120,6 +120,109 @@ for(let tagId = 0; tagId < tags.length; tagId++){
 }
 console.log(uniqueTags);
 */
+
 //Ex. 9.2.4
+/*
+const employees = [
+    { name: 'Amanda Doe', salary: 3000 },
+    { name: 'John Doe', salary: 4000 },
+    { name: 'Claire Downson', salary: 2000 },
+    { name: 'Freddie Clarkson', salary: 6000 },
+    { name: 'Thomas Delaney', salary: 8200 }
+  ];
+  function filterEmployees(employeeObject, minSalary, maxSalary){
+    const employeeObjectUpdated = [];
+    for(const employeeId of employeeObject){
+        if(employeeId.salary > minSalary & employeeId.salary < maxSalary){
+            employeeObjectUpdated.push(employeeId);
+        }
+    }
+    return employeeObjectUpdated;
+  }
+  const filteredEmployees = filterEmployees(employees, 2000, 8000);
+  console.log(filteredEmployees);
+*/
 
+//Ex. 9.2.5
+/*
+const obj = {
+    firstName: 'John',
+    lastName: 'Doe'
+}
 
+function displayProperties(object){
+    for(const objectProperty in object){
+        console.log(objectProperty,': ', object[objectProperty]);
+    }
+}
+displayProperties(obj);
+*/
+
+//Ex. 9.2.6
+/*
+function forEach(array, callback){
+    for(const element of array){
+        callback(element);
+    }
+}
+
+forEach(['John', 'Amanda', 'Thomas'], function(item) { console.log(item); });
+*/
+
+//Ex. 9.2.7
+/*
+function formatName(name){
+    const letterArrayUpdated = [];
+    const letterArray = name.split("");
+    for (let letterIndex = 0; letterIndex < letterArray.length; letterIndex++) {
+        let letter = letterArray[letterIndex];
+        //console.log(letter);
+        if(letterIndex !== 0 && letterArray[letterIndex-1] !==' ' && letter === letter.toUpperCase()){
+            letter = letter.toLowerCase();
+            //console.log('upper case');
+        }
+        else if(letterIndex == 0 || letterArray[letterIndex-1] ==' '){
+            letter = letter.toUpperCase();
+            //console.log('lower case');
+        }
+        letterArrayUpdated.push(letter);
+    }
+    const nameUpdated = letterArrayUpdated.join('');
+    console.log(nameUpdated);
+}
+formatName('aMAnDa dOE'); // returns Amanda Doe
+formatName('AMANDA DOE'); // returns Amanda Doe
+formatName('john DOE'); // returns John Doe
+*/
+
+//Ex. 9.2.8
+/*
+function getEvensInRange(start,end){
+    const array = [];
+    for(let i = start; i <= end; i++ ){
+        if(i%2 === 0){
+            array.push(i);
+        }
+    }
+    console.log(array);
+}
+
+getEvensInRange(0, 9); // returns [0, 2, 4, 6, 8]
+getEvensInRange(7, 12); // returns [8, 10, 12]
+*/
+
+//Ex. 9.2.8;
+/*
+function filter(array, callback){
+    const filteredArray = [];
+    for(let i = 0; i<array.length; i++){
+        if(callback(array[i])){
+            console.log(array[i]);
+            filteredArray.push(array[i])
+        }
+    }
+    return filteredArray;
+}
+
+filter([5, 6, 7], function(item) { return item%2 === 0 });
+*/
